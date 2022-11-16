@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,7 +22,6 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @ToString
 public class Universite implements Serializable {
 	/**
@@ -37,7 +35,7 @@ public class Universite implements Serializable {
 	private String nomUniv;
 
 	//relationships
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany
 	private Set<Departement> Departement;
 
 	

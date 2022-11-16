@@ -44,9 +44,7 @@ public class DepartementServiceImp implements DepartementService {
     @Override
     public List<Departement> afficherDepartements() {
         List<Departement> departements=depRepo.findAll();
-        for (Departement dep:departements){
-           log.info("departement :"+dep);
-        }
+
         return departements;
 
     }

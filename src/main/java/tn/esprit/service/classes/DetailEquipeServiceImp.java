@@ -44,14 +44,14 @@ public class DetailEquipeServiceImp implements DetailEquipeService {
 
     }
     
-    @Scheduled(cron = "*/15 * * * * *")
-    public void cronMethod() {
-    	log.info("Method  à exécute la tâche pour chaque intervalle de 15 secondes.");
-}
+  //  @Scheduled(cron = "*/15 * * * * *")
+   // public void cronMethod() {
+    //	log.info("Method  à exécute la tâche pour chaque intervalle de 15 secondes.");
+//}
     
     
-    @Scheduled(fixedDelay = 60000)
-    public void fixedDelayMethod() {
-    	log.info("Method with fixed delay");
-}
+  //  @Scheduled(fixedDelay = 60000)
+  //  public void fixedDelayMethod() {
+    //	log.info("Method with fixed delay");
+//}
 }

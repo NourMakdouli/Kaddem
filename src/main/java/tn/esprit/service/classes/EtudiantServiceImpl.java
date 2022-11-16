@@ -1,12 +1,12 @@
 package tn.esprit.service.classes;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
+//import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.persistance.entities.Etudiant;
@@ -16,7 +16,7 @@ import tn.esprit.service.interfaces.EtudiantService;
 @Service
 public class EtudiantServiceImpl implements EtudiantService {
 	
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+	//private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 	
 	
@@ -71,10 +71,10 @@ public class EtudiantServiceImpl implements EtudiantService {
 		return etudiants;
 	}
 
-	@Scheduled(fixedRate = 5000)
-	public void reportCurrentTime() {
-		log.info("The time is now {}", dateFormat.format(new Date()));
-	}
+	//@Scheduled(fixedRate = 5000)
+	//public void reportCurrentTime() {
+	//	log.info("The time is now {}", dateFormat.format(new Date()));
+	//}
 
 
 }

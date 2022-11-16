@@ -16,7 +16,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @ToString
 public class DetailEquipe implements Serializable {
 	/**

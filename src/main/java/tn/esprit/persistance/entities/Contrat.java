@@ -59,7 +59,7 @@ public class Contrat implements Serializable {
 	//relation
 	    
     @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
 	private Etudiant etudiant;
 
 		

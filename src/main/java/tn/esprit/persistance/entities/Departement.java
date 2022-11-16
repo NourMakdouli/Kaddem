@@ -13,11 +13,9 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 
 @Entity
@@ -25,8 +23,6 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@ToString
 public class Departement implements Serializable {
 	/**
 	 * 
@@ -41,6 +37,11 @@ public class Departement implements Serializable {
 	@JsonIgnore
 	@OneToMany(mappedBy = "departement")
 	private Set<Etudiant> Etudiants;
+
+	@Override
+	public String toString() {
+		return "Departement [idDepartement=" + idDepartement + ", nomDepart=" + nomDepart + "]";
+	}
 
 
 	
