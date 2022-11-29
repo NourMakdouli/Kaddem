@@ -16,7 +16,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class DetailEquipe implements Serializable {
 	/**
 	 * 
@@ -34,10 +33,16 @@ public class DetailEquipe implements Serializable {
 	@OneToOne(mappedBy = "DetailEquipe")
 	private Equipe equipe;
 
+	@Override
+	public String toString() {
+		return "DetailEquipe [idDetailEquipe=" + idDetailEquipe + ", salle=" + salle + ", thematique=" + thematique
+				+"]";
+	}
+
 
 	
-	
-	
+
+
 	
 
 	

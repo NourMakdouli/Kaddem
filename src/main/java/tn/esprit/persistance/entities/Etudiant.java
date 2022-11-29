@@ -17,6 +17,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,12 +30,8 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+
 public class Etudiant implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name="idEtudiant")
@@ -56,9 +54,9 @@ public class Etudiant implements Serializable {
 	
 	
 	//between team and students i would rather have it in students
-	
+	@JsonIgnore
 	@ManyToMany(mappedBy = "Etudiants")
-	private Set<Equipe> Equipes;
+	private Set<Equipe> equipes;
 	
 	
 	@OneToMany(mappedBy = "etudiant")
@@ -68,7 +66,13 @@ public class Etudiant implements Serializable {
 
 	
 	
-
+	@Override
+	public String toString() {
+		return "Etudiant [idEtudiant=" + idEtudiant + ", prenomE=" + prenomE + ", nomE=" + nomE + ", dateDebut="
+				+ dateDebut + ", option=" + option + ", contrat="
+				+ contrats + ", departement=" + departement + ", equipe=" + equipes + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
 	
 	
 	

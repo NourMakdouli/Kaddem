@@ -9,9 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,15 +30,29 @@ public class Departement implements Serializable {
 	@Column(name="idDepartement")
 	private Integer idDepartement; 
 	private String nomDepart;
+	private String codeInterne; 
+	private String chefDepart;
+	private String emailDepart;  
 	
-	@JsonIgnore
+	
+
+    
 	@OneToMany(mappedBy = "departement")
 	private Set<Etudiant> Etudiants;
 
+
+
+
 	@Override
 	public String toString() {
-		return "Departement [idDepartement=" + idDepartement + ", nomDepart=" + nomDepart + "]";
+		return "Departement [idDepartement=" + idDepartement + ", nomDepart=" + nomDepart + ", codeInterne="
+				+ codeInterne + ", chefDepart=" + chefDepart + ", emailDepart=" + emailDepart + "]";
 	}
+
+
+
+
+
 
 
 	

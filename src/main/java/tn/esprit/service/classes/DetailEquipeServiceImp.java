@@ -1,15 +1,15 @@
 package tn.esprit.service.classes;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
+//import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 import tn.esprit.persistance.entities.DetailEquipe;
 import tn.esprit.persistance.repositories.DetailEquipeRepository;
 import tn.esprit.service.interfaces.DetailEquipeService;
 import java.util.List;
-@Slf4j
+//@Slf4j
 @Service
 public class DetailEquipeServiceImp implements DetailEquipeService {
     @Autowired

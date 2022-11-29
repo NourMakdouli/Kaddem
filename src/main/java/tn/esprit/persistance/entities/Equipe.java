@@ -20,18 +20,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Equipe implements Serializable  {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name="idEquipe")
@@ -55,7 +49,13 @@ public class Equipe implements Serializable  {
 	private Equipe DetailEquipe;
 
 
-	
+	@Override
+	public String toString() {
+		return "Equipe [idEquipe=" + idEquipe + ", nomEquipe=" + nomEquipe + ", niveau=" + niveau + ", DetailEquipe="
+				+ DetailEquipe + "]";
+	}
+
+
 
 }
 
